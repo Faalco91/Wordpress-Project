@@ -1,0 +1,62 @@
+# 🐋 Ignore le volume Docker des données MySQL/MariaDB
+db_data/
+
+# 📦 Ignore tous les fichiers/folders WordPress natifs et wp-content
+/*
+!/wp-content/
+!/docker-compose.yml
+!.gitignore
+
+# 🌟 N'inclure que ton thème custom
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/ESGI_THEME/
+
+# 💾 Divers fichiers temporaires et backup
+*.log
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+*.bak
+*.tmp
+
+# 💻 Fichiers systèmes et IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# 📝 Fichiers d'environnement (optionnel)
+.env
+.env.local
+
+# 🛠️ Node & dépendances front
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json # (optionnel, à ignorer si tu ne veux pas versionner le lockfile)
+
+# 🧶 Fichiers SASS/CSS générés
+*.css.map
+*.scssc
+.sass-cache/
+.cache/
+dist/
+build/
+
+# 🗂️ Fichiers C++ (hors WordPress)
+*.cc
+*.hh
+
+# 🔥 Fichiers de build front optionnels
+wp-content/themes/ESGI_THEME/style.css.map
+
+
+# 🔄 Fichiers de synchronisation cloud
+*.sync
