@@ -43,6 +43,7 @@ yarn-error.log
 package-lock.json # (optionnel, à ignorer si tu ne veux pas versionner le lockfile)
 
 # 🧶 Fichiers SASS/CSS générés
+*.css
 *.css.map
 *.scssc
 .sass-cache/
