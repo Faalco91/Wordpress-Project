@@ -1,0 +1,47 @@
+@import '../partials/colors';
+@import '../partials/functions';
+
+.services {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        padding: rem(132) 0 rem(64) rem(157);
+    }
+
+    .services-list {
+        display: flex;
+
+        .service-item {
+            img {
+                width: rem(480);
+                height: rem(480);
+            }
+        }
+
+        .service-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            p {
+                text-align: center;
+                font-size: rem(35);
+                font-weight: 600;
+                line-height: 100%;
+                letter-spacing: rem(0);
+                
+            }
+            .service-bar {
+                display: block;
+                width: auto;
+                height: 5px;
+                margin: 8px 0 0 0;
+                border-radius: 3px;
+                background: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+                content: "";
+              }
+        }
+    }
+}

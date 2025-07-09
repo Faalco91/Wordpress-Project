@@ -1,0 +1,34 @@
+@import '../partials/colors';
+@import '../partials/functions';
+
+.intro-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(110);
+    padding-left: rem(160);
+    width: 100%;
+    align-self: flex-end;
+
+    .img-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: rem(227);
+
+        img {
+            width: 80%;
+        }
+    }
+
+
+    .page-main-title {
+        width: 1191px;
+        height: 221px;
+      }
+      .main-title {
+        font-size: rem(83);
+        color: $text-title;
+        font-weight: 600;
+        line-height: 100%;
+      }
+  }
+  

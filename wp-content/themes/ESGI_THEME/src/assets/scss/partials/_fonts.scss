@@ -1,0 +1,9 @@
+// Font import (ajoute aussi dans header.php)
+@import url('https://fonts.googleapis.com/css?family=Mulish:400,700&display=swap');
+
+$main-font: 'Mulish', 'Arial', sans-serif;
+
+
+body {
+    font-family: $main-font;
+  }

@@ -1,0 +1,13 @@
+.about-us {
+
+    .about-us-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .about-us-img {
+            width: rem(660);
+            height: rem(990);
+        }
+    }
+}

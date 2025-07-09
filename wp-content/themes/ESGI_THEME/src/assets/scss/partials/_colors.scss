@@ -1,0 +1,18 @@
+// assets/scss/partials/_colors.scss
+$black: #000;
+$white: #fff;
+$primary: #050A3A;
+$secondary: #42476B;
+$accent: #f04873;
+$footer-bg: #12144D;
+$footer-text: #bcc3e1;
+$text-title: #050A3A;
+
+:root { 
+    --bg-color: #{$white};
+    --text-color: #{$black};
+    --secondary-color: #42476B;
+    --accent-color: #f04873;
+    --footer-bg: #12144D;
+    --footer-text: #bcc3e1;
+}

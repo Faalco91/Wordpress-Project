@@ -1,0 +1,82 @@
+@import './colors';
+@import './functions';
+@import url('https://fonts.googleapis.com/css?family=Mulish:300,400,600,700&display=swap');
+
+// Reset et styles globaux
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  color: $primary;
+  font-size: 18px;
+  line-height: 1.6;
+
+    main {
+      padding: 6rem 0rem;
+      display: flex;
+      flex-direction: column;
+
+
+      h2 {
+        font-size: rem(63);
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 3px;
+        margin-bottom: rem(16);
+      }
+  
+    }
+
+    .section-title {
+      padding-left: 433px;
+      padding-top: rem(132);
+      padding-bottom: rem(139);
+    }
+
+    .information {
+      h3 {
+        font-size: rem(47);
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0;
+      }
+    }
+    .information-2 {
+      padding-left: rem(185);
+      p {
+        font-weight: 400;
+        color: #8A8A8A;
+        line-height: rem(38);
+        font-size: rem(20);
+        width: rem(638);
+
+      }
+      h3 {
+        font-size: rem(47);
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 0;
+      }
+      
+    }
+
+    .information-2-content{
+      padding-bottom: rem(51);
+
+      p {
+        padding-top: rem(20);
+      }
+    }
+    .information-1 {
+      padding-left: rem(433);
+      padding-top: rem(132);
+      padding-bottom: rem(139);
+
+      p {
+        font-size: rem(26);
+        font-weight: 400;
+        color: #8A8A8A;
+        width: rem(914);
+
+      }
+    }
+}

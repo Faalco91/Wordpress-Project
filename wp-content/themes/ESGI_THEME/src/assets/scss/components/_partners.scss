@@ -1,0 +1,45 @@
+@import '../partials/colors';
+@import '../partials/functions';
+
+.partners {
+    h2 {
+        padding: rem(132) 0 rem(64) rem(157);
+    }
+    .partners-logos {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: rem(157);
+
+        img {
+            object-fit: cover;
+        }
+        .partner-logo-1 {
+            width: rem(91);
+            height: rem(106);
+        }
+        .partner-logo-2{
+            width: rem(187);
+            height: rem(44);
+        }
+        .partner-logo-3 {
+            width: rem(172);
+            height: rem(59);
+        }
+        .partner-logo-4 {
+            width: rem(221);
+            height: rem(64);
+        }
+        .partner-logo-5 {
+            width: rem(154);
+            height: rem(62);
+        }
+        .partner-logo-6 {
+            width: rem(201);
+            height: rem(74);
+        }
+    }
+    img:not(:first-child) {
+        margin-left: rem(119);
+    }
+}

@@ -1,0 +1,10 @@
+// Example mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@function rem($val) {
+  @return calc($val / 16) * 1rem;
+}
