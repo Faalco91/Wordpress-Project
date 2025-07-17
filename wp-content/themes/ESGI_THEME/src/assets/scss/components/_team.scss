@@ -1,0 +1,40 @@
+.team {
+    display: flex;
+    flex-direction: column;
+
+
+    h2 {
+        padding: rem(132) 0 rem(64) rem(157);
+    }
+
+    .team-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 rem(157);
+
+        img {
+            object-fit: cover;
+            width: rem(333);
+            height: rem(501);
+        }
+
+        .team-member {
+            h3 {
+                padding: rem(28) 0 rem(27) 0;
+                font-weight: 600;
+                font-size: rem(35);
+                line-height: 100%;
+                letter-spacing: 0;
+            }
+            p {
+                color: #8A8A8A;
+                line-height: rem(38);
+                font-size: rem(20);
+                font-weight: 400;
+                letter-spacing: 0;
+            }
+        }
+
+    }
+}
