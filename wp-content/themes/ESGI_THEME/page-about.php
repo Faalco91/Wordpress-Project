@@ -11,7 +11,7 @@ get_header();
     <div class="page-main-title">
       <h1 class="main-title"><?php the_field('intro-title'); ?></h1>
     </div>
-    <div class="img-container">
+    <div id="img-container-about" class="img-container">
       <img src="<?php the_field('intro-img'); ?>" alt="">
     </div>
   </section>
