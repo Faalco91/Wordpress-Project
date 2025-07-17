@@ -93,10 +93,34 @@ header {
   text-align: right;
 }
 .overlay-menu__list a {
+  position: relative;
+  padding-bottom: rem(15); /* espace sous le texte pour le soulignement */
   color: #fff;
-  font-size: 2rem;
   text-decoration: none;
 }
+
+/* 2. Le soulignement dégradé, initialement à 0 % de largeur */
+.overlay-menu__list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;               /* colle la ligne juste sous le texte */
+  width: 0;                /* invisible au départ */
+  height: rem(4);             /* épaisseur du trait */
+  background: linear-gradient(to right, #fbc490, #f65285);
+  transition: width 0.3s ease;
+}
+
+/* 3. Au survol, on étend la largeur à 100 % */
+.overlay-menu__list li:hover a::after {
+  width: 100%;
+}
+
+/* 4. Si l’élément est actif (current-menu-item), on le garde souligné */
+.overlay-menu__list .current-menu-item > a::after {
+  width: 100%;
+}
+
 .overlay-menu__list .current-menu-item > a {
   text-decoration: underline;
 }
