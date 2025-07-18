@@ -1,6 +1,9 @@
 @import '../partials/colors';
 @import '../partials/functions';
 
+#services-page {
+    padding-top: rem(96);
+}
 .services {
     display: flex;
     flex-direction: column;
@@ -18,7 +21,6 @@
                 height: rem(480);
             }
         }
-
         .service-3 {
             display: flex;
             justify-content: center;
@@ -43,5 +45,21 @@
                 content: "";
               }
         }
+    }
+
+    #private-parties {
+        margin: rem(131) 0 0 0;
+        padding: 0;
+    }
+
+    #private-parties > .information-1-content {
+        padding: 0 0 rem(125) rem(158);
+
+        h2 {
+            padding: 0 0 rem(16) 0;
+        }
+    }
+    #private-parties > .information-2-content {
+        padding: 0;
     }
 }
