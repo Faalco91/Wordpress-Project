@@ -12,7 +12,7 @@ get_header();
       <h1 class="main-title"><?php the_field('intro-title'); ?></h1>
     </div>
     <div class="img-container">
-      <img src="<?php the_field('intro-img'); ?>" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/image1_home.png" alt="Accueil ESGI"/>
     </div>
   </section>
 
@@ -27,7 +27,7 @@ get_header();
     <!-- BLOCK WHO/VISION/MISSION -->
     <div class="about-us-content">
       <div class="about-us-img">
-        <img src="<?php the_field('section-1-img-1'); ?>" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_1_about.png" alt="About ESGI"/>
       </div>
       <div class="information information-2">
         <div class="information-2-content">
@@ -51,18 +51,18 @@ get_header();
     <h2><?php the_field('section-title-2') ?></h2>
     <div class="services-list">
       <div class="service-item service-1">
-        <img src="<?php the_field('section-2-img-1'); ?>" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_1_services.png" alt="Service 1"/>
       </div>
       <div class="service-item service-2">
-        <img src="<?php the_field('section-2-img-2'); ?>" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_2_services.png" alt="Service 2"/>
       </div>
       <div class="service-item service-3">
-        <p><?php the_field('text-section-2') ?>
+        <p>Private Parties
           <span class="service-bar"></span>
         </p>
       </div>
       <div class="service-item service-4">
-        <img src="<?php the_field('section-2-img-3'); ?>" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_3_services.png" alt="Service 3"/>
       </div>
     </div>
   </section>
@@ -71,12 +71,12 @@ get_header();
   <section class="partners">
     <h2><?php the_field('section-title-3') ?></h2>
     <div class="partners-logos">
-      <img class="partner-logo-1" src="<?php the_field('section-3-img-1'); ?>" alt="">
-      <img class="partner-logo-3" src="<?php the_field('section-3-img-2'); ?>" alt="">
-      <img class="partner-logo-4" src="<?php the_field('section-3-img-3'); ?>" alt="">
-      <img class="partner-logo-5" src="<?php the_field('section-3-img-4'); ?>" alt="">
-      <img class="partner-logo-5"  src="<?php the_field('section-3-img-5'); ?>" alt="">
-      <img class="partner-logo-6"  src="<?php the_field('section-3-img-6'); ?>" alt="">
+      <img class="partner-logo-1" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_1_partners.png" alt="Partenaire 1"/>
+      <img class="partner-logo-3" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_2_partners.png" alt="Partenaire 2"/>
+      <img class="partner-logo-4" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_3_partners.png" alt="Partenaire 3"/>
+      <img class="partner-logo-5" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_4_partners.png" alt="Partenaire 4"/>
+      <img class="partner-logo-5" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_5_partners.png" alt="Partenaire 5"/>
+      <img class="partner-logo-6" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/img_6_partners.png" alt="Partenaire 6"/>
     </div>
   </section>
 </main>

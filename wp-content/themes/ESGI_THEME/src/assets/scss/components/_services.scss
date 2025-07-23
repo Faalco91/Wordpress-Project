@@ -1,65 +1,307 @@
 @import '../partials/colors';
 @import '../partials/functions';
 
-#services-page {
-    padding-top: rem(96);
-}
 .services {
     display: flex;
     flex-direction: column;
+    padding-top: rem(96);
+    position: relative;
+    min-height: rem(2048);
 
     h2 {
-        padding: rem(132) 0 rem(64) rem(157);
+        position: absolute;
+        top: rem(212);
+        left: rem(156);
+        width: rem(515);
+        height: rem(105);
+        font-size: rem(63);
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 3px;
+        margin: 0;
+        padding: 0;
+        color: $text-title;
+        z-index: 1;
     }
 
     .services-list {
         display: flex;
+        position: absolute;
+        top: rem(446);
+        left: 0;
+        width: 100%;
+        height: rem(480);
 
         .service-item {
-            img {
+            &.service-1 {
+                position: absolute;
+                left: 0;
                 width: rem(480);
                 height: rem(480);
-            }
-        }
-        .service-3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-
-            p {
-                text-align: center;
-                font-size: rem(35);
-                font-weight: 600;
-                line-height: 100%;
-                letter-spacing: rem(0);
                 
+                img {
+                    width: rem(480);
+                    height: rem(480);
+                    object-fit: cover;
+                    display: block;
+                }
             }
-            .service-bar {
-                display: block;
-                width: auto;
-                height: 5px;
-                margin: 8px 0 0 0;
-                border-radius: 3px;
-                background: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
-                content: "";
-              }
+
+            &.service-2 {
+                position: absolute;
+                left: rem(480);
+                width: rem(480);
+                height: rem(480);
+                
+                img {
+                    width: rem(480);
+                    height: rem(480);
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+
+            &.service-3 {
+                position: absolute;
+                top: 0;
+                left: rem(960);
+                width: rem(480);
+                height: rem(480);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f8f8f8;
+
+                p {
+                    text-align: center;
+                    font-size: rem(35);
+                    font-weight: 600;
+                    line-height: 100%;
+                    letter-spacing: 0;
+                    color: $text-title;
+                    
+                    .service-bar {
+                        display: block;
+                        width: rem(120);
+                        height: rem(5);
+                        margin: rem(20) auto 0;
+                        border-radius: rem(3);
+                        background: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+                    }
+                }
+            }
+
+            &.service-4 {
+                position: absolute;
+                left: rem(1440);
+                width: rem(480);
+                height: rem(480);
+                
+                img {
+                    width: rem(480);
+                    height: rem(480);
+                    object-fit: cover;
+                    display: block;
+                }
+            }
         }
     }
 
     #private-parties {
-        margin: rem(131) 0 0 0;
+        position: absolute;
+        top: rem(1057);
+        left: 0;
+        width: 100%;
+        margin: 0;
         padding: 0;
-    }
 
-    #private-parties > .information-1-content {
-        padding: 0 0 rem(125) rem(158);
+        .information-1-content {
+            position: relative;
+            padding: 0;
 
-        h2 {
-            padding: 0 0 rem(16) 0;
+            h2 {
+                position: absolute;
+                top: 0;
+                left: rem(155);
+                width: rem(481);
+                height: rem(79);
+                font-size: rem(63);
+                font-weight: 600;
+                line-height: 100%;
+                letter-spacing: 3px;
+                margin: 0;
+                padding: 0;
+                color: $text-title;
+            }
+
+            p {
+                position: absolute;
+                top: rem(95);
+                left: rem(158);
+                width: rem(914);
+                height: rem(140);
+                font-size: rem(26);
+                font-weight: 400;
+                color: #8A8A8A;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0;
+            }
         }
     }
-    #private-parties > .information-2-content {
-        padding: 0;
+
+    .full-width-image-container {
+        position: absolute;
+        top: rem(1417);
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .full-width-image {
+        width: rem(1920);
+        height: rem(631);
+        max-width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        position: static;
+        min-height: auto;
+        flex-direction: column;
+        padding: rem(80) rem(20) rem(20) rem(20);
+
+        h2 {
+            position: static;
+            width: 100%;
+            height: auto;
+            font-size: rem(48);
+            text-align: left;
+            margin-bottom: rem(40);
+            padding: 0;
+            z-index: auto;
+            color: $text-title;
+        }
+
+        .services-list {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            gap: rem(20);
+
+            .service-item {
+                position: static !important;
+                width: 100% !important;
+                height: rem(300) !important;
+                left: auto !important;
+
+                &.service-1,
+                &.service-2,
+                &.service-4 {
+                    img {
+                        width: 100%;
+                        height: rem(300);
+                        object-fit: cover;
+                    }
+                }
+
+                &.service-3 {
+                    height: rem(200) !important;
+                    padding: rem(20);
+                    margin: 0;
+
+                    p {
+                        font-size: rem(28);
+                    }
+                }
+            }
+        }
+
+        #private-parties {
+            position: static;
+            width: 100%;
+            margin-top: rem(40);
+
+            .information-1-content {
+                position: static;
+                padding: 0;
+
+                h2 {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    font-size: rem(40);
+                    margin-bottom: rem(20);
+                    padding: 0;
+                }
+
+                p {
+                    position: static;
+                    width: 100%;
+                    height: auto;
+                    font-size: rem(18);
+                    line-height: 1.6;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        .full-width-image-container {
+            position: static;
+            width: 100%;
+            margin-top: rem(40);
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1920 / 631;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .services {
+        .services-list {
+            .service-item {
+                &.service-1,
+                &.service-2,
+                &.service-4 {
+                    width: rem(360);
+                    height: rem(360);
+
+                    img {
+                        width: rem(360);
+                        height: rem(360);
+                    }
+                }
+
+                &.service-3 {
+                    width: rem(360);
+                    height: rem(360);
+                }
+            }
+        }
+
+        #private-parties {
+            .information-1-content {
+                h2 {
+                    font-size: rem(50);
+                }
+
+                p {
+                    font-size: rem(22);
+                    width: rem(700);
+                }
+            }
+        }
     }
 }
