@@ -1,178 +1,169 @@
-@import '../partials/colors';
-@import '../partials/functions';
-
 header {
+
     .container {
-        width: 100%;
-        padding: rem(16) rem(140);
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: white;
-        z-index: 9999; // Z-index très élevé pour passer au-dessus de tout
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1); // Ombre légère pour la lisibilité
+      width: 100%;
+      padding: rem(16) rem(140);
+      position: fixed;
+      background-color: white;
+      position: fixed;
     }
 
     .site-branding {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-        width: 140px;
+      width: 140px;
     }
-}
+  }
+
 
 /* Overlay plein écran */
 .overlay-menu {
-    position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: auto;
-    background: #0a0e28;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: rem(49.4) rem(160) rem(99) rem(160);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .3s ease, visibility .3s;
-    z-index: 99999; // Z-index encore plus élevé pour le menu overlay
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: auto;
+  background: #0a0e28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: rem(49.4) rem(160) rem(99) rem(160);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease, visibility .3s;
+  z-index: 9999;
 }
-
 .overlay-menu.active {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .header-open-menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content-open-menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-
 .overlay-menu_sections span { 
-    font-size: rem(70);
-    font-weight: 600;
-    line-height: 100%;
-    letter-spacing: rem(0);
+  font-size: rem(70);
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: rem(0);
 }
 
 /* Bouton fermer */
 .overlay-menu__close {
-    background: none;
-    border: none;
-    height: rem(17);
-    width: rem(17);
-    color: #fff;
-    cursor: pointer;
+  background: none;
+  border: none;
+  height: rem(17);
+  width: rem(17);
+  color: #fff;
+  cursor: pointer;
 }
 
-/* Logo dans l'overlay */
+/* Logo dans l’overlay */
 .overlay-menu__logo a {
-    color: #fff;
-    font-size: 2rem;
-    text-decoration: none;
-    margin-bottom: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
 }
 
 /* Recherche */
 .overlay-menu__search {
-    margin-top: rem(39.7);
+  margin-top: rem(39.7);
 }
 
 /* Liste de liens */
 .overlay-menu__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
 .overlay-menu__list li {
-    margin: 1rem 0;
-    text-align: right;
+  margin: 1rem 0;
+  text-align: right;
 }
-
 .overlay-menu__list a {
-    position: relative;
-    padding-bottom: rem(15);
-    color: #fff;
-    text-decoration: none;
+  position: relative;
+  padding-bottom: rem(15); /* espace sous le texte pour le soulignement */
+  color: #fff;
+  text-decoration: none;
 }
 
-/* Soulignement dégradé */
+/* 2. Le soulignement dégradé, initialement à 0 % de largeur */
 .overlay-menu__list a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: rem(4);
-    background: linear-gradient(to right, #fbc490, #f65285);
-    transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;               /* colle la ligne juste sous le texte */
+  width: 0;                /* invisible au départ */
+  height: rem(4);             /* épaisseur du trait */
+  background: linear-gradient(to right, #fbc490, #f65285);
+  transition: width 0.3s ease;
 }
 
+/* 3. Au survol, on étend la largeur à 100 % */
 .overlay-menu__list li:hover a::after {
-    width: 100%;
+  width: 100%;
 }
 
+/* 4. Si l’élément est actif (current-menu-item), on le garde souligné */
 .overlay-menu__list .current-menu-item > a::after {
-    width: 100%;
+  width: 100%;
 }
 
 .overlay-menu__list .current-menu-item > a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Hamburger */
 .menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
-
 .menu-toggle__bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #000;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #000;
 }
 
-/* Search */
+/* La placeholder */
 .search-placeholder {
-    color: #fff;
-    font-size: rem(20);
-    line-height: 100%;
-    letter-spacing: rem(1);
-    font-weight: 800;
-    cursor: text;
+  color: #fff;
+  font-size: rem(20);
+  line-height: 100%;
+  letter-spacing: rem(1);
+  font-weight: 800;
+  cursor: text;
 }
 
+/* Quand le form est affiché, on peut l’animer si besoin */
 .search-form {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
-
 .search-form input[type="search"] {
-    width: 100%;
-    padding: .5rem 1rem;
-    font-size: 1rem;
+  width: 100%;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+}
+.search-form input[type="submit"] {
+  display: none; /* ou stylisez-le autrement */
 }
 
-.search-form input[type="submit"] {
-    display: none;
-}
 
 .overlay-menu__list a,
 .overlay-menu__list a:visited,
@@ -181,25 +172,3 @@ header {
     text-decoration: none !important;
 }
 
-// Responsive pour mobile
-@media (max-width: 768px) {
-    header {
-        .container {
-            padding: rem(16) rem(20);
-        }
-    }
-
-    .overlay-menu {
-        padding: rem(20);
-        align-items: stretch;
-    }
-
-    .content-open-menu {
-        flex-direction: column;
-        gap: rem(30);
-    }
-
-    .overlay-menu_sections span {
-        font-size: rem(50);
-    }
-}
