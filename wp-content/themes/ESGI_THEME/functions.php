@@ -12,10 +12,13 @@ function esgi_enqueue_assets() {
     );
 }
 
+// Activer les images mises en avant
+add_theme_support('post-thumbnails');
+
 // Déclarer les emplacements de menus
 add_action( 'after_setup_theme', 'esgi_register_menus' );
 function esgi_register_menus() {
     register_nav_menus( array(
         'menu-1' => __( 'Menu principal', 'esgi' ),
         ));
-    }
+}
